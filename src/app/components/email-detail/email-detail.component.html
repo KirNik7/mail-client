@@ -1,0 +1,13 @@
+<div class="container">
+  <h2>Email Detail</h2>
+  <div *ngIf="email">
+    <p><strong>From:</strong> {{ email.from }}</p>
+    <p><strong>To:</strong> {{ email.to }}</p>
+    <p><strong>Subject:</strong> {{ email.subject }}</p>
+    <p><strong>Body:</strong> {{ email.body }}</p>
+    <button (click)="reply()">Reply</button>
+  </div>
+  <div *ngIf="!email">
+    <p>Email not found.</p>
+  </div>
+</div>

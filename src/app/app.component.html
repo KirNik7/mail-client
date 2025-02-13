@@ -1,0 +1,9 @@
+<nav>
+  <a routerLink="/login">Login</a> |
+  <a routerLink="/inbox" *ngIf="isAuthenticated">Inbox</a> |
+  <a routerLink="/outbox" *ngIf="isAuthenticated">Outbox</a> |
+  <a routerLink="/create" *ngIf="isAuthenticated">Create</a> |
+  <a routerLink="/drafts" *ngIf="isAuthenticated">Drafts</a>
+  <button (click)="onLogout()" *ngIf="isAuthenticated">Logout</button>
+</nav>
+<router-outlet></router-outlet>

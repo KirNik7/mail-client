@@ -1,0 +1,9 @@
+<div class="container">
+  <h2>Inbox</h2>
+  <ul>
+    <li *ngFor="let email of emails">
+      <a [routerLink]="['/email', email.id]">{{ email.subject }}</a>
+      <button (click)="deleteEmail(email.id)">Delete</button>
+    </li>
+  </ul>
+</div>
